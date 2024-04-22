@@ -1,24 +1,24 @@
 /**
- * @file 64drive.h
- * @brief 64drive flashcart support
+ * @file flashcart.h
+ * @brief ED64 Flashcart Utilities
  * @ingroup flashcart 
  */
 
-#ifndef FLASHCART_64DRIVE_H__
-#define FLASHCART_64DRIVE_H__
+#ifndef FLASHCART_ED64_H__
+#define FLASHCART_ED64_H__
 
 
 #include "../flashcart.h"
 
 
 /**
- * @addtogroup 64drive
+ * @addtogroup daisydrive64
  * @{
  */
 
-flashcart_t *d64_get_flashcart (void);
+flashcart_t *daisydrive64_get_flashcart (void);
 
-/** @} */ /* 64drive */
+/** @} */ /* daisydrive64 */
 
 
 #endif
