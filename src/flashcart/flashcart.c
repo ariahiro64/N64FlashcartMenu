@@ -11,6 +11,7 @@
 
 #include "64drive/64drive.h"
 #include "sc64/sc64.h"
+#include "daisysrive64/daisysrive64.h"
 
 
 #define SAVE_WRITEBACK_MAX_SECTORS  (256)
@@ -101,6 +102,9 @@ flashcart_err_t flashcart_init (void) {
 
         case CART_SC:   // SummerCart64
             flashcart = sc64_get_flashcart();
+            break;
+        case CART_DD64:   // DaisyDrive64
+            flashcart = dd64_get_flashcart();
             break;
 
         default:
