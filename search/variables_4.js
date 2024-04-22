@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['rumble_5fenabled_0',['rumble_enabled',['../settings_8h.html#af8e5d894c1bc8c114fb0bf9ad5d12360',1,'settings_t']]]
+  ['features_0',['features',['../rom__info_8h.html#a9f87b56f9e5c8677c3075bb4bb38d3f6',1,'rom_info_t']]]
 ];

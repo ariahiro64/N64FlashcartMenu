@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pal60_5fenabled_0',['pal60_enabled',['../settings_8h.html#ad88eea6bf7e99f89f316513306a07506',1,'settings_t']]]
+  ['endianness_0',['endianness',['../rom__info_8h.html#a0b802f6d76c318b3077b4b076fa29c15',1,'rom_info_t']]]
 ];

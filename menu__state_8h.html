@@ -117,8 +117,13 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>MENU_MODE_SYSTEM_INFO</b>
 , <b>MENU_MODE_IMAGE_VIEWER</b>
+, <b>MENU_MODE_TEXT_VIEWER</b>
 , <b>MENU_MODE_MUSIC_PLAYER</b>
-, <b>MENU_MODE_CREDITS</b>
+, <br />
+&#160;&#160;<b>MENU_MODE_CREDITS</b>
+, <b>MENU_MODE_SETTINGS_EDITOR</b>
+, <b>MENU_MODE_RTC</b>
+, <b>MENU_MODE_FLASHCART</b>
 , <br />
 &#160;&#160;<b>MENU_MODE_LOAD_ROM</b>
 , <b>MENU_MODE_LOAD_DISK</b>
@@ -127,7 +132,6 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>MENU_MODE_FAULT</b>
 , <b>MENU_MODE_BOOT</b>
-, <b>__MENU_MODE_COUNT</b>
 <br />
  }</td></tr>
 <tr class="memdesc:aea8b3793f8f84c964eb96c91b0768a70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Menu mode enumeration. <br /></td></tr>
@@ -141,7 +145,9 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>ENTRY_TYPE_SAVE</b>
 , <b>ENTRY_TYPE_IMAGE</b>
 , <b>ENTRY_TYPE_MUSIC</b>
-, <b>ENTRY_TYPE_OTHER</b>
+, <b>ENTRY_TYPE_TEXT</b>
+, <br />
+&#160;&#160;<b>ENTRY_TYPE_OTHER</b>
 <br />
  }</td></tr>
 <tr class="memdesc:a7e00527da87fefde59d447ebc4aedd7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">File entry type enumeration. <br /></td></tr>
@@ -326,12 +332,6 @@ options</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
-<a id="a0ab3a6faf42848e1003ae626ba15ce9d" name="a0ab3a6faf42848e1003ae626ba15ce9d"></a>bool</td>
-<td class="fieldname">
-system_info</td>
-<td class="fielddoc">
-</td></tr>
-<tr><td class="fieldtype">
 <a id="a2e5d8aa3dfa8ef34ca5131d20f9dad51" name="a2e5d8aa3dfa8ef34ca5131d20f9dad51"></a>bool</td>
 <td class="fieldname">
 settings</td>
@@ -358,6 +358,12 @@ settings</td>
 <a id="a9f7d0ee82b6a6ca7ddeae841f3253059" name="a9f7d0ee82b6a6ca7ddeae841f3253059"></a>bool</td>
 <td class="fieldname">
 valid</td>
+<td class="fielddoc">
+</td></tr>
+<tr><td class="fieldtype">
+<a id="a24bc8a6655a0623a7f4e402c12df4b9c" name="a24bc8a6655a0623a7f4e402c12df4b9c"></a>bool</td>
+<td class="fieldname">
+reload</td>
 <td class="fielddoc">
 </td></tr>
 <tr><td class="fieldtype">
@@ -438,7 +444,7 @@ disk_info</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Oct 20 2023 00:49:40 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Apr 22 2024 18:17:42 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
