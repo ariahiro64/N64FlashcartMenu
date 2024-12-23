@@ -106,9 +106,9 @@ typedef void&#160;</td><td class="memItemRight" valign="bottom"><b>flashcart_pro
 Enumerations</h2></td></tr>
 <tr class="memitem:a324286864a7bc56dbbeeb791aa81ab73"><td class="memItemLeft" align="right" valign="top"><a id="a324286864a7bc56dbbeeb791aa81ab73" name="a324286864a7bc56dbbeeb791aa81ab73"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> { <br />
 &#160;&#160;<b>FLASHCART_OK</b>
-, <b>FLASHCART_ERR_NOT_DETECTED</b>
 , <b>FLASHCART_ERR_OUTDATED</b>
 , <b>FLASHCART_ERR_SD_CARD</b>
+, <b>FLASHCART_ERR_BBFS</b>
 , <br />
 &#160;&#160;<b>FLASHCART_ERR_ARGS</b>
 , <b>FLASHCART_ERR_LOAD</b>
@@ -126,13 +126,13 @@ Enumerations</h2></td></tr>
 <tr class="separator:a956fff40ddf9cba0ca30fabc0cecb016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51261e17f581033419e18c3e3d0c2cf2"><td class="memItemLeft" align="right" valign="top"><a id="a51261e17f581033419e18c3e3d0c2cf2" name="a51261e17f581033419e18c3e3d0c2cf2"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="flashcart_8h.html#a51261e17f581033419e18c3e3d0c2cf2">flashcart_save_type_t</a> { <br />
 &#160;&#160;<b>FLASHCART_SAVE_TYPE_NONE</b>
-, <b>FLASHCART_SAVE_TYPE_EEPROM_4K</b>
-, <b>FLASHCART_SAVE_TYPE_EEPROM_16K</b>
-, <b>FLASHCART_SAVE_TYPE_SRAM</b>
+, <b>FLASHCART_SAVE_TYPE_EEPROM_4KBIT</b>
+, <b>FLASHCART_SAVE_TYPE_EEPROM_16KBIT</b>
+, <b>FLASHCART_SAVE_TYPE_SRAM_256KBIT</b>
 , <br />
 &#160;&#160;<b>FLASHCART_SAVE_TYPE_SRAM_BANKED</b>
-, <b>FLASHCART_SAVE_TYPE_SRAM_128K</b>
-, <b>FLASHCART_SAVE_TYPE_FLASHRAM</b>
+, <b>FLASHCART_SAVE_TYPE_SRAM_1MBIT</b>
+, <b>FLASHCART_SAVE_TYPE_FLASHRAM_1MBIT</b>
 , <b>FLASHCART_SAVE_TYPE_FLASHRAM_PKST2</b>
 , <br />
 &#160;&#160;<b>__FLASHCART_SAVE_TYPE_END</b>
@@ -146,9 +146,9 @@ Functions</h2></td></tr>
 <tr class="memitem:af25818bfc66bf9d2d1bc0874cdd3ef44"><td class="memItemLeft" align="right" valign="top"><a id="af25818bfc66bf9d2d1bc0874cdd3ef44" name="af25818bfc66bf9d2d1bc0874cdd3ef44"></a>
 char *&#160;</td><td class="memItemRight" valign="bottom"><b>flashcart_convert_error_message</b> (<a class="el" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> err)</td></tr>
 <tr class="separator:af25818bfc66bf9d2d1bc0874cdd3ef44"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aeb4443197e675ab8bdef69a00f7ebae1"><td class="memItemLeft" align="right" valign="top"><a id="aeb4443197e675ab8bdef69a00f7ebae1" name="aeb4443197e675ab8bdef69a00f7ebae1"></a>
-<a class="el" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flashcart_init</b> (void)</td></tr>
-<tr class="separator:aeb4443197e675ab8bdef69a00f7ebae1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8bb9abfe366442f0b730d2cd6cc09d80"><td class="memItemLeft" align="right" valign="top"><a id="a8bb9abfe366442f0b730d2cd6cc09d80" name="a8bb9abfe366442f0b730d2cd6cc09d80"></a>
+<a class="el" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flashcart_init</b> (const char **storage_prefix)</td></tr>
+<tr class="separator:a8bb9abfe366442f0b730d2cd6cc09d80"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb03233ab0fafc933ae9808a93a96987"><td class="memItemLeft" align="right" valign="top"><a id="adb03233ab0fafc933ae9808a93a96987" name="adb03233ab0fafc933ae9808a93a96987"></a>
 <a class="el" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a>&#160;</td><td class="memItemRight" valign="bottom"><b>flashcart_deinit</b> (void)</td></tr>
 <tr class="separator:adb03233ab0fafc933ae9808a93a96987"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -219,7 +219,7 @@ defect_tracks[16][12]</td>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 22 2024 18:17:42 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Dec 23 2024 22:52:50 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>

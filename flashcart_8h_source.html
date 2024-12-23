@@ -87,9 +87,9 @@ $(function() {
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">   16</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    FLASHCART_OK,</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FLASHCART_ERR_NOT_DETECTED,</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    FLASHCART_ERR_OUTDATED,</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    FLASHCART_ERR_SD_CARD,</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    FLASHCART_ERR_OUTDATED,</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    FLASHCART_ERR_SD_CARD,</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    FLASHCART_ERR_BBFS,</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    FLASHCART_ERR_ARGS,</div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    FLASHCART_ERR_LOAD,</div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    FLASHCART_ERR_INT,</div>
@@ -104,12 +104,12 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="flashcart_8h.html#a51261e17f581033419e18c3e3d0c2cf2">   35</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span> {</div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    FLASHCART_SAVE_TYPE_NONE,</div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FLASHCART_SAVE_TYPE_EEPROM_4K,</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    FLASHCART_SAVE_TYPE_EEPROM_16K,</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    FLASHCART_SAVE_TYPE_SRAM,</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    FLASHCART_SAVE_TYPE_EEPROM_4KBIT,</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    FLASHCART_SAVE_TYPE_EEPROM_16KBIT,</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    FLASHCART_SAVE_TYPE_SRAM_256KBIT,</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    FLASHCART_SAVE_TYPE_SRAM_BANKED,</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    FLASHCART_SAVE_TYPE_SRAM_128K,</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    FLASHCART_SAVE_TYPE_FLASHRAM,</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    FLASHCART_SAVE_TYPE_SRAM_1MBIT,</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    FLASHCART_SAVE_TYPE_FLASHRAM_1MBIT,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    FLASHCART_SAVE_TYPE_FLASHRAM_PKST2,</div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    __FLASHCART_SAVE_TYPE_END</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <a class="code hl_enumeration" href="flashcart_8h.html#a51261e17f581033419e18c3e3d0c2cf2">flashcart_save_type_t</a>;</div>
@@ -133,12 +133,12 @@ $(function() {
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="structflashcart__t.html#a565a653be5e8c7100f3e171b1a685fb3">   72</a></span>    <a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> (*load_64dd_ipl) (<span class="keywordtype">char</span> *ipl_path, flashcart_progress_callback_t *progress);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="structflashcart__t.html#ac69df979cdaf9dad1df8ce52593ea009">   74</a></span>    <a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> (*load_64dd_disk) (<span class="keywordtype">char</span> *disk_path, <a class="code hl_struct" href="flashcart_8h.html#structflashcart__disk__parameters__t">flashcart_disk_parameters_t</a> *disk_parameters);</div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="structflashcart__t.html#ac6fb8bf7d1957a4200273068c94d13b4">   76</a></span>    <a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> (*set_save_type) (<a class="code hl_enumeration" href="flashcart_8h.html#a51261e17f581033419e18c3e3d0c2cf2">flashcart_save_type_t</a> save_type);</div>
-<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structflashcart__t.html#ae845c50d123fd327f7b3213adfb6702d">   78</a></span>    <a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> (*set_save_writeback) (uint32_t *sectors);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="structflashcart__t.html#a19eba40921dc872c15fab58bdcc853b1">   78</a></span>    <a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> (*set_save_writeback) (<span class="keywordtype">char</span> *save_path);</div>
 <div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>} <a class="code hl_struct" href="structflashcart__t.html">flashcart_t</a>;</div>
 <div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
 <div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">char</span> *flashcart_convert_error_message (<a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> err);</div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> flashcart_init (<span class="keywordtype">void</span>);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span><a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> flashcart_init (<span class="keyword">const</span> <span class="keywordtype">char</span> **storage_prefix);</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> flashcart_deinit (<span class="keywordtype">void</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="keywordtype">bool</span> flashcart_has_feature (<a class="code hl_enumeration" href="flashcart_8h.html#a956fff40ddf9cba0ca30fabc0cecb016">flashcart_features_t</a> feature);</div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><a class="code hl_enumeration" href="flashcart_8h.html#a324286864a7bc56dbbeeb791aa81ab73">flashcart_err_t</a> flashcart_load_rom (<span class="keywordtype">char</span> *rom_path, <span class="keywordtype">bool</span> byte_swap, flashcart_progress_callback_t *progress);</div>
@@ -157,7 +157,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Apr 22 2024 18:17:42 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
+Generated on Mon Dec 23 2024 22:52:49 for N64FlashcartMenu by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.5
 </small></address>
 </body>
 </html>
